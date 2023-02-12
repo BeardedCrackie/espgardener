@@ -10,9 +10,11 @@ def run(debug=False):
     if wlan is None:
         if debug:
             print("Could not initialize the network connection.")
-    while True:
-        pass  # you shall not pass :D
+        while True:
+            pass  # you shall not pass :D
+
+    print
 
 def deactivate(debug=False):
-    wifi_lib.disconnect()
+    wifimgr.stop()
     

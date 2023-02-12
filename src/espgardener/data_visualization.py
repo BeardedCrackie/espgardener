@@ -12,6 +12,8 @@ api_key = 'HGR8BTLZCGD9351I'
 
 
 def print_to_thingspeak(data, debug=False, test=True):
+    if debug:    
+        print("writing to thingspeak")
     HTTP_HEADERS = {'Content-Type': 'application/json'}
     vals = {}
     for x in range(len(data)):
@@ -34,3 +36,4 @@ def print_to_thingspeak(data, debug=False, test=True):
     display.contrast(120)  # bright
     display.show()
     
+print("Data visualizator loaded.")

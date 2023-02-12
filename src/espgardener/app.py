@@ -11,11 +11,9 @@ import os
 import esp32
 
 def run(debug=False, test=False):
-    
     if debug:
         if machine.reset_cause() == machine.DEEPSLEEP_RESET:
             print('woke from a deep sleep') 
-    
     configurator.run(debug)
     values = measurement.measure()
     iri_time = irrigation.irrigate(values)

@@ -8,7 +8,7 @@ soil_detector = ADC(Pin(36), atten=ADC.ATTN_11DB)
     
 def measure():
     
-    d = dht.DHT12(Pin(4))
+    d = dht.DHT22(Pin(4))
     d.measure()
     
     global soil_detector
